@@ -1,0 +1,20 @@
+mixin NavItem(name)
+  li.nav-item
+    a.nav-link(href=`/${name.toLowerCase()}`)= name
+
+nav.navbar.navbar-expand-lg.navbar-light.bg-light
+  a.navbar-brand(href='#') Navbar
+  button.navbar-toggler(type='button', data-toggle='collapse', data-target='#navbarSupportedContent', aria-controls='navbarSupportedContent', aria-expanded='false', aria-label='Toggle navigation')
+    span.navbar-toggler-icon
+  #navbarSupportedContent.collapse.navbar-collapse
+    ul.navbar-nav.mr-auto
+      - var names = ['Honey', 'Chirayu', 'Alpa', 'Hitesh', 'Dhruv', 'Khushi', 'Pratham', 'Diya']
+      for name in names
+        +NavItem(name)
+         //- +NavItem('Chirayu')
+         //- +NavItem('Alpa')
+         //- +NavItem('Hitesh')
+         //- +NavItem('Dhruv')
+         //- +NavItem('Khushi')
+         //- +NavItem('Pratham')
+         //- +NavItem('Diya')

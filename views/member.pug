@@ -1,0 +1,15 @@
+extends layout
+
+block content
+  .container
+    h1= name
+    ul
+        li I am in #{grade} 
+        li I am in #{school}
+        li I am a #{gender}
+        li I live in #{city} 
+        li I have a hobby that is #{hobbies}
+        li I enjoy #{likes}
+        li I dislike #{dislikes}
+        if relation
+          li I am Honey's #{relation}
